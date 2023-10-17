@@ -5,6 +5,15 @@ class Player {
     constructor(name: string) {
         this.playerName = name;
     }
+
+    healthDecrease(){
+        let health = this.health - Math.floor(Math.random() * 100 -1);
+        this.health = health;
+    }
+
+    healthIncrease(){
+        this.health = 100;
+    }
 }
 
 class Opponent {
@@ -13,6 +22,10 @@ class Opponent {
     
     constructor(name: string){
         this.opponentName = name;
+    }
+    healthDecrease(){
+        let health = this.health - Math.floor(Math.random() * 100 -1);
+        this.health = health;
     }
 }
 
